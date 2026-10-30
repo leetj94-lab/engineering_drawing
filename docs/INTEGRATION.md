@@ -35,3 +35,11 @@ operational status. The current frontend neither imports live releases nor share
 A production backend should store document hashes, released/retired revisions, extraction
 jobs, validation findings, approval history and concurrency-safe review notes. CAD/PDF
 conversion and arbitrary SVG uploads require a separately secured processing pipeline.
+
+## Document handover available
+
+The document_delivery demo at https://leetj94-lab.github.io/document_delivery/
+accepts the same canonical assetId. It owns dossier submissions, structured document
+checks, review/acceptance and release manifests. Links preserve equipment context;
+browser-local decisions are not automatically synchronized across applications.
+For equipment without a seeded dossier, create a package from the shared master list.
