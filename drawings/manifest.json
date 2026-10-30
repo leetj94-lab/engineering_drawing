@@ -1,0 +1,1028 @@
+{
+  "schemaVersion": "1.0.0",
+  "synthetic": true,
+  "assets": [
+    {
+      "id": "EQ-UT-00142",
+      "name": "Chilled water pump A",
+      "kind": "pump"
+    },
+    {
+      "id": "EQ-UT-00143",
+      "name": "Chilled water pump B",
+      "kind": "pump"
+    },
+    {
+      "id": "EQ-UT-00144",
+      "name": "Chilled water pump C",
+      "kind": "pump"
+    },
+    {
+      "id": "EQ-CH-00201",
+      "name": "Chiller unit A",
+      "kind": "chiller"
+    },
+    {
+      "id": "EQ-CH-00202",
+      "name": "Chiller unit B",
+      "kind": "chiller"
+    },
+    {
+      "id": "EQ-AH-00301",
+      "name": "Air handling unit A",
+      "kind": "ahu"
+    },
+    {
+      "id": "EQ-AH-00302",
+      "name": "Air handling unit B",
+      "kind": "ahu"
+    },
+    {
+      "id": "EQ-TK-00401",
+      "name": "Buffer tank",
+      "kind": "tank"
+    }
+  ],
+  "standards": {
+    "pump": {
+      "id": "SYM-P-01",
+      "name": "Centrifugal pump",
+      "requiredAsset": true
+    },
+    "chiller": {
+      "id": "SYM-CH-01",
+      "name": "Chiller package",
+      "requiredAsset": true
+    },
+    "ahu": {
+      "id": "SYM-AH-01",
+      "name": "Air handling unit",
+      "requiredAsset": true
+    },
+    "tank": {
+      "id": "SYM-TK-01",
+      "name": "Buffer vessel",
+      "requiredAsset": true
+    },
+    "valve": {
+      "id": "SYM-V-01",
+      "name": "Isolation / control valve"
+    },
+    "sensor": {
+      "id": "SYM-I-01",
+      "name": "Instrument bubble"
+    },
+    "motor": {
+      "id": "SYM-M-01",
+      "name": "Motor / feeder",
+      "requiredAsset": true
+    },
+    "opc": {
+      "id": "SYM-OPC-01",
+      "name": "Off-page connector"
+    },
+    "bus": {
+      "id": "SYM-BUS-01",
+      "name": "Electrical bus"
+    }
+  },
+  "drawings": [
+    {
+      "id": "UT-PID-0101",
+      "revision": "C",
+      "title": "CHILLED WATER GENERATION",
+      "discipline": "P&ID",
+      "status": "Released",
+      "siteId": "DEMO-PLANT-01",
+      "area": "Utility building",
+      "date": "2026-10-01",
+      "scale": "NTS",
+      "size": "A1",
+      "drawnBy": "DEMO ENGINEERING",
+      "approvedBy": "DEMO APPROVER",
+      "file": "UT-PID-0101-C.svg",
+      "description": "Chillers and buffer vessel with linked pump distribution.",
+      "objects": [
+        {
+          "id": "CH-201",
+          "type": "chiller",
+          "x": 420,
+          "y": 330,
+          "label": "CH-A",
+          "assetId": "EQ-CH-00201",
+          "standard": "SYM-CH-01"
+        },
+        {
+          "id": "CH-202",
+          "type": "chiller",
+          "x": 790,
+          "y": 330,
+          "label": "CH-B",
+          "assetId": "EQ-CH-00202",
+          "standard": "SYM-CH-01"
+        },
+        {
+          "id": "TK-401",
+          "type": "tank",
+          "x": 1030,
+          "y": 440,
+          "label": "BUFFER",
+          "assetId": "EQ-TK-00401",
+          "standard": "SYM-TK-01"
+        },
+        {
+          "id": "TT-101",
+          "type": "sensor",
+          "x": 570,
+          "y": 200,
+          "label": "TT 101",
+          "assetId": "",
+          "standard": "SYM-I-01"
+        },
+        {
+          "id": "V-101",
+          "type": "valve",
+          "x": 640,
+          "y": 520,
+          "label": "V-101",
+          "assetId": "",
+          "standard": "SYM-V-01"
+        },
+        {
+          "id": "OPC-101",
+          "type": "opc",
+          "x": 1180,
+          "y": 200,
+          "label": "CHWS-01",
+          "assetId": "",
+          "standard": "SYM-OPC-01",
+          "targetDrawing": "UT-PID-0102",
+          "targetObject": "OPC-201",
+          "connection": "CHWS-01"
+        }
+      ],
+      "pipes": [
+        {
+          "id": "L-101",
+          "points": [
+            [
+              210,
+              200
+            ],
+            [
+              1150,
+              200
+            ]
+          ],
+          "label": "CHWS · DN150",
+          "layer": "pipes"
+        },
+        {
+          "id": "L-102",
+          "points": [
+            [
+              210,
+              520
+            ],
+            [
+              1080,
+              520
+            ]
+          ],
+          "label": "CHWR · DN150",
+          "layer": "pipes"
+        },
+        {
+          "id": "L-103",
+          "points": [
+            [
+              420,
+              200
+            ],
+            [
+              420,
+              520
+            ]
+          ],
+          "label": "",
+          "layer": "pipes"
+        },
+        {
+          "id": "L-104",
+          "points": [
+            [
+              790,
+              200
+            ],
+            [
+              790,
+              520
+            ]
+          ],
+          "label": "",
+          "layer": "pipes"
+        },
+        {
+          "id": "L-105",
+          "points": [
+            [
+              1030,
+              200
+            ],
+            [
+              1030,
+              380
+            ]
+          ],
+          "label": "",
+          "layer": "pipes"
+        }
+      ],
+      "notes": [
+        "Two chiller trains with a common supply / return header.",
+        "Follow CHWS-01 to the pump distribution sheet.",
+        "Synthetic data · No company facility layout."
+      ]
+    },
+    {
+      "id": "UT-PID-0102",
+      "revision": "C",
+      "title": "CHILLED WATER PUMP DISTRIBUTION",
+      "discipline": "P&ID",
+      "status": "Released",
+      "siteId": "DEMO-PLANT-01",
+      "area": "Utility building",
+      "date": "2026-10-01",
+      "scale": "NTS",
+      "size": "A1",
+      "drawnBy": "DEMO ENGINEERING",
+      "approvedBy": "DEMO APPROVER",
+      "file": "UT-PID-0102-C.svg",
+      "description": "Three parallel pumps and cross-sheet supply / return connections.",
+      "objects": [
+        {
+          "id": "P-142",
+          "type": "pump",
+          "x": 440,
+          "y": 310,
+          "label": "CWP-A",
+          "assetId": "EQ-UT-00142",
+          "standard": "SYM-P-01"
+        },
+        {
+          "id": "P-143",
+          "type": "pump",
+          "x": 690,
+          "y": 310,
+          "label": "CWP-B",
+          "assetId": "EQ-UT-00143",
+          "standard": "SYM-P-01"
+        },
+        {
+          "id": "P-144",
+          "type": "pump",
+          "x": 940,
+          "y": 310,
+          "label": "CWP-C",
+          "assetId": "EQ-UT-00144",
+          "standard": "SYM-P-01"
+        },
+        {
+          "id": "V-142",
+          "type": "valve",
+          "x": 440,
+          "y": 470,
+          "label": "V-142",
+          "assetId": "",
+          "standard": "SYM-V-01"
+        },
+        {
+          "id": "V-143",
+          "type": "valve",
+          "x": 690,
+          "y": 470,
+          "label": "V-143",
+          "assetId": "",
+          "standard": "SYM-V-01"
+        },
+        {
+          "id": "PT-101",
+          "type": "sensor",
+          "x": 560,
+          "y": 190,
+          "label": "PT 101",
+          "assetId": "",
+          "standard": "SYM-I-01",
+          "value": "PRESSURE INDICATION"
+        },
+        {
+          "id": "OPC-201",
+          "type": "opc",
+          "x": 160,
+          "y": 210,
+          "label": "CHWS-01",
+          "assetId": "",
+          "standard": "SYM-OPC-01",
+          "targetDrawing": "UT-PID-0101",
+          "targetObject": "OPC-101",
+          "connection": "CHWS-01"
+        },
+        {
+          "id": "OPC-202",
+          "type": "opc",
+          "x": 1180,
+          "y": 550,
+          "label": "AHU-SUP",
+          "assetId": "",
+          "standard": "SYM-OPC-01",
+          "targetDrawing": "UT-PID-0103",
+          "targetObject": "OPC-301",
+          "connection": "AHU-SUP"
+        }
+      ],
+      "pipes": [
+        {
+          "id": "L-201",
+          "points": [
+            [
+              190,
+              210
+            ],
+            [
+              1120,
+              210
+            ]
+          ],
+          "label": "CHWS HEADER · DN150",
+          "layer": "pipes"
+        },
+        {
+          "id": "L-202",
+          "points": [
+            [
+              350,
+              550
+            ],
+            [
+              1150,
+              550
+            ]
+          ],
+          "label": "DISTRIBUTION · DN100",
+          "layer": "pipes"
+        },
+        {
+          "id": "L-P0",
+          "points": [
+            [
+              440,
+              210
+            ],
+            [
+              440,
+              550
+            ]
+          ],
+          "label": "",
+          "layer": "pipes"
+        },
+        {
+          "id": "L-P1",
+          "points": [
+            [
+              690,
+              210
+            ],
+            [
+              690,
+              550
+            ]
+          ],
+          "label": "",
+          "layer": "pipes"
+        },
+        {
+          "id": "L-P2",
+          "points": [
+            [
+              940,
+              210
+            ],
+            [
+              940,
+              550
+            ]
+          ],
+          "label": "",
+          "layer": "pipes"
+        }
+      ],
+      "notes": [
+        "CHWS supplied from generation sheet UT-PID-0101.",
+        "Off-page connectors preserve equipment / line context.",
+        "Synthetic process concept — not an engineering design."
+      ]
+    },
+    {
+      "id": "UT-PID-0102",
+      "revision": "B",
+      "title": "CHILLED WATER PUMP DISTRIBUTION",
+      "discipline": "P&ID",
+      "status": "Released",
+      "siteId": "DEMO-PLANT-01",
+      "area": "Utility building",
+      "date": "2026-10-01",
+      "scale": "NTS",
+      "size": "A1",
+      "drawnBy": "DEMO ENGINEERING",
+      "approvedBy": "DEMO APPROVER",
+      "file": "UT-PID-0102-B.svg",
+      "description": "Three parallel pumps and cross-sheet supply / return connections.",
+      "objects": [
+        {
+          "id": "P-142",
+          "type": "pump",
+          "x": 440,
+          "y": 310,
+          "label": "CWP-A",
+          "assetId": "EQ-UT-00142",
+          "standard": "SYM-P-01"
+        },
+        {
+          "id": "P-143",
+          "type": "pump",
+          "x": 690,
+          "y": 310,
+          "label": "CWP-B",
+          "assetId": "EQ-UT-00143",
+          "standard": "SYM-P-01"
+        },
+        {
+          "id": "V-142",
+          "type": "valve",
+          "x": 440,
+          "y": 470,
+          "label": "V-142",
+          "assetId": "",
+          "standard": "SYM-V-01"
+        },
+        {
+          "id": "V-143",
+          "type": "valve",
+          "x": 690,
+          "y": 470,
+          "label": "V-143",
+          "assetId": "",
+          "standard": "SYM-V-01"
+        },
+        {
+          "id": "PT-101",
+          "type": "sensor",
+          "x": 520,
+          "y": 190,
+          "label": "PT 101",
+          "assetId": "",
+          "standard": "SYM-I-01",
+          "value": "PRESSURE INDICATION"
+        },
+        {
+          "id": "OPC-201",
+          "type": "opc",
+          "x": 160,
+          "y": 210,
+          "label": "CHWS-01",
+          "assetId": "",
+          "standard": "SYM-OPC-01",
+          "targetDrawing": "UT-PID-0101",
+          "targetObject": "OPC-101",
+          "connection": "CHWS-01"
+        },
+        {
+          "id": "OPC-202",
+          "type": "opc",
+          "x": 1180,
+          "y": 550,
+          "label": "AHU-SUP",
+          "assetId": "",
+          "standard": "SYM-OPC-01",
+          "targetDrawing": "UT-PID-0103",
+          "targetObject": "OPC-301",
+          "connection": "AHU-SUP"
+        }
+      ],
+      "pipes": [
+        {
+          "id": "L-201",
+          "points": [
+            [
+              190,
+              210
+            ],
+            [
+              1120,
+              210
+            ]
+          ],
+          "label": "CHWS HEADER · DN150",
+          "layer": "pipes"
+        },
+        {
+          "id": "L-202",
+          "points": [
+            [
+              350,
+              550
+            ],
+            [
+              1150,
+              550
+            ]
+          ],
+          "label": "DISTRIBUTION · DN100",
+          "layer": "pipes"
+        },
+        {
+          "id": "L-P0",
+          "points": [
+            [
+              440,
+              210
+            ],
+            [
+              440,
+              550
+            ]
+          ],
+          "label": "",
+          "layer": "pipes"
+        },
+        {
+          "id": "L-P1",
+          "points": [
+            [
+              690,
+              210
+            ],
+            [
+              690,
+              550
+            ]
+          ],
+          "label": "",
+          "layer": "pipes"
+        }
+      ],
+      "notes": [
+        "CHWS supplied from generation sheet UT-PID-0101.",
+        "Off-page connectors preserve equipment / line context.",
+        "Synthetic process concept — not an engineering design."
+      ]
+    },
+    {
+      "id": "UT-PID-0103",
+      "revision": "B",
+      "title": "AIR HANDLING DISTRIBUTION",
+      "discipline": "P&ID",
+      "status": "Released",
+      "siteId": "DEMO-PLANT-01",
+      "area": "Utility building",
+      "date": "2026-10-01",
+      "scale": "NTS",
+      "size": "A1",
+      "drawnBy": "DEMO ENGINEERING",
+      "approvedBy": "DEMO APPROVER",
+      "file": "UT-PID-0103-B.svg",
+      "description": "Air handling coil connections and filter instrumentation.",
+      "objects": [
+        {
+          "id": "AH-301",
+          "type": "ahu",
+          "x": 490,
+          "y": 330,
+          "label": "AHU-A",
+          "assetId": "EQ-AH-00301",
+          "standard": "SYM-AH-01"
+        },
+        {
+          "id": "AH-302",
+          "type": "ahu",
+          "x": 930,
+          "y": 330,
+          "label": "AHU-B",
+          "assetId": "EQ-AH-00302",
+          "standard": "SYM-AH-01"
+        },
+        {
+          "id": "DP-301",
+          "type": "sensor",
+          "x": 490,
+          "y": 190,
+          "label": "DP 301",
+          "assetId": "",
+          "standard": "SYM-I-01"
+        },
+        {
+          "id": "DP-302",
+          "type": "sensor",
+          "x": 930,
+          "y": 190,
+          "label": "DP 302",
+          "assetId": "",
+          "standard": "SYM-I-01"
+        },
+        {
+          "id": "V-301",
+          "type": "valve",
+          "x": 490,
+          "y": 510,
+          "label": "CV-301",
+          "assetId": "",
+          "standard": "SYM-V-01"
+        },
+        {
+          "id": "V-302",
+          "type": "valve",
+          "x": 930,
+          "y": 510,
+          "label": "CV-302",
+          "assetId": "",
+          "standard": "SYM-V-01"
+        },
+        {
+          "id": "OPC-301",
+          "type": "opc",
+          "x": 160,
+          "y": 200,
+          "label": "AHU-SUP",
+          "assetId": "",
+          "standard": "SYM-OPC-01",
+          "targetDrawing": "UT-PID-0102",
+          "targetObject": "OPC-202",
+          "connection": "AHU-SUP"
+        }
+      ],
+      "pipes": [
+        {
+          "id": "L-301",
+          "points": [
+            [
+              190,
+              200
+            ],
+            [
+              1120,
+              200
+            ]
+          ],
+          "label": "COIL SUPPLY · DN100",
+          "layer": "pipes"
+        },
+        {
+          "id": "L-302",
+          "points": [
+            [
+              230,
+              570
+            ],
+            [
+              1120,
+              570
+            ]
+          ],
+          "label": "COIL RETURN · DN100",
+          "layer": "pipes"
+        },
+        {
+          "id": "L-303",
+          "points": [
+            [
+              490,
+              200
+            ],
+            [
+              490,
+              570
+            ]
+          ],
+          "label": "",
+          "layer": "pipes"
+        },
+        {
+          "id": "L-304",
+          "points": [
+            [
+              930,
+              200
+            ],
+            [
+              930,
+              570
+            ]
+          ],
+          "label": "",
+          "layer": "pipes"
+        }
+      ],
+      "notes": [
+        "Filter pressure instrument is a drawing object, not telemetry.",
+        "Coil control valves are governed symbol types."
+      ]
+    },
+    {
+      "id": "UT-GA-0201",
+      "revision": "A",
+      "title": "UTILITY HALL EQUIPMENT ARRANGEMENT",
+      "discipline": "Layout",
+      "status": "Released",
+      "siteId": "DEMO-PLANT-01",
+      "area": "Utility building",
+      "date": "2026-10-01",
+      "scale": "NTS",
+      "size": "A1",
+      "drawnBy": "DEMO ENGINEERING",
+      "approvedBy": "DEMO APPROVER",
+      "file": "UT-GA-0201-A.svg",
+      "description": "Equipment locations, service clearance and maintenance access.",
+      "objects": [
+        {
+          "id": "CH-201",
+          "type": "chiller",
+          "x": 360,
+          "y": 240,
+          "label": "CH-A",
+          "assetId": "EQ-CH-00201",
+          "standard": "SYM-CH-01"
+        },
+        {
+          "id": "CH-202",
+          "type": "chiller",
+          "x": 710,
+          "y": 240,
+          "label": "CH-B",
+          "assetId": "EQ-CH-00202",
+          "standard": "SYM-CH-01"
+        },
+        {
+          "id": "TK-401",
+          "type": "tank",
+          "x": 1060,
+          "y": 260,
+          "label": "TANK",
+          "assetId": "EQ-TK-00401",
+          "standard": "SYM-TK-01"
+        },
+        {
+          "id": "P-142",
+          "type": "pump",
+          "x": 360,
+          "y": 450,
+          "label": "CWP-A",
+          "assetId": "EQ-UT-00142",
+          "standard": "SYM-P-01"
+        },
+        {
+          "id": "P-143",
+          "type": "pump",
+          "x": 600,
+          "y": 450,
+          "label": "CWP-B",
+          "assetId": "EQ-UT-00143",
+          "standard": "SYM-P-01"
+        },
+        {
+          "id": "P-144",
+          "type": "pump",
+          "x": 840,
+          "y": 450,
+          "label": "CWP-C",
+          "assetId": "EQ-UT-00144",
+          "standard": "SYM-P-01"
+        },
+        {
+          "id": "AH-301",
+          "type": "ahu",
+          "x": 390,
+          "y": 600,
+          "label": "AHU-A",
+          "assetId": "EQ-AH-00301",
+          "standard": "SYM-AH-01"
+        },
+        {
+          "id": "AH-302",
+          "type": "ahu",
+          "x": 850,
+          "y": 600,
+          "label": "AHU-B",
+          "assetId": "EQ-AH-00302",
+          "standard": "SYM-AH-01"
+        }
+      ],
+      "pipes": [],
+      "notes": [
+        "Dashed zones illustrate service clearance, not verified dimensions.",
+        "Common IDs connect this arrangement to P&IDs and the twin."
+      ]
+    },
+    {
+      "id": "UT-SLD-0301",
+      "revision": "B",
+      "title": "UTILITY MOTOR POWER SINGLE LINE",
+      "discipline": "Electrical",
+      "status": "Released",
+      "siteId": "DEMO-PLANT-01",
+      "area": "Utility building",
+      "date": "2026-10-01",
+      "scale": "NTS",
+      "size": "A1",
+      "drawnBy": "DEMO ENGINEERING",
+      "approvedBy": "DEMO APPROVER",
+      "file": "UT-SLD-0301-B.svg",
+      "description": "400 V switchboard and equipment motor-feeder relationships.",
+      "objects": [
+        {
+          "id": "BUS-01",
+          "type": "bus",
+          "x": 690,
+          "y": 200,
+          "label": "MCC-UT-01 · 400 V",
+          "assetId": "",
+          "standard": "SYM-BUS-01"
+        },
+        {
+          "id": "M-142",
+          "type": "motor",
+          "x": 360,
+          "y": 440,
+          "label": "M-A",
+          "assetId": "EQ-UT-00142",
+          "standard": "SYM-M-01"
+        },
+        {
+          "id": "M-143",
+          "type": "motor",
+          "x": 600,
+          "y": 440,
+          "label": "M-B",
+          "assetId": "EQ-UT-00143",
+          "standard": "SYM-M-01"
+        },
+        {
+          "id": "M-144",
+          "type": "motor",
+          "x": 840,
+          "y": 440,
+          "label": "M-C",
+          "assetId": "EQ-UT-00144",
+          "standard": "SYM-M-01"
+        },
+        {
+          "id": "M-201",
+          "type": "motor",
+          "x": 1080,
+          "y": 440,
+          "label": "M-CH",
+          "assetId": "EQ-CH-00201",
+          "standard": "SYM-M-01"
+        }
+      ],
+      "pipes": [
+        {
+          "id": "E-0",
+          "points": [
+            [
+              360,
+              210
+            ],
+            [
+              360,
+              440
+            ]
+          ],
+          "label": "",
+          "layer": "electrical"
+        },
+        {
+          "id": "E-1",
+          "points": [
+            [
+              600,
+              210
+            ],
+            [
+              600,
+              440
+            ]
+          ],
+          "label": "",
+          "layer": "electrical"
+        },
+        {
+          "id": "E-2",
+          "points": [
+            [
+              840,
+              210
+            ],
+            [
+              840,
+              440
+            ]
+          ],
+          "label": "",
+          "layer": "electrical"
+        },
+        {
+          "id": "E-3",
+          "points": [
+            [
+              1080,
+              210
+            ],
+            [
+              1080,
+              440
+            ]
+          ],
+          "label": "",
+          "layer": "electrical"
+        }
+      ],
+      "notes": [
+        "Functional single-line illustration, not a protection study.",
+        "Motor objects reuse mechanical equipment canonical IDs."
+      ]
+    },
+    {
+      "id": "UT-PID-0199",
+      "revision": "A",
+      "title": "DRAFT VALIDATION EXERCISE",
+      "discipline": "P&ID",
+      "status": "Draft",
+      "siteId": "DEMO-PLANT-01",
+      "area": "Utility building",
+      "date": "2026-10-01",
+      "scale": "NTS",
+      "size": "A1",
+      "drawnBy": "DEMO ENGINEERING",
+      "approvedBy": "Pending",
+      "file": "UT-PID-0199-A.svg",
+      "description": "Intentional violations demonstrate object/title/connector checks.",
+      "objects": [
+        {
+          "id": "P-X",
+          "type": "pump",
+          "x": 430,
+          "y": 330,
+          "label": "UNTAGGED",
+          "assetId": "BAD-TAG",
+          "standard": "UNAPPROVED"
+        },
+        {
+          "id": "V-X",
+          "type": "valve",
+          "x": 780,
+          "y": 430,
+          "label": "V-X",
+          "assetId": "",
+          "standard": "SYM-V-01"
+        },
+        {
+          "id": "OPC-X",
+          "type": "opc",
+          "x": 1180,
+          "y": 220,
+          "label": "UNRESOLVED",
+          "assetId": "",
+          "standard": "SYM-OPC-01",
+          "targetDrawing": "UT-PID-9999",
+          "targetObject": "OPC-MISSING",
+          "connection": "BROKEN"
+        }
+      ],
+      "pipes": [
+        {
+          "id": "L-X",
+          "points": [
+            [
+              430,
+              220
+            ],
+            [
+              1150,
+              220
+            ]
+          ],
+          "label": "",
+          "layer": "pipes"
+        }
+      ],
+      "notes": [
+        "Intentional nonconforming sample for validation only."
+      ],
+      "titleOverrides": {
+        "approvedBy": "",
+        "scale": ""
+      }
+    }
+  ]
+}

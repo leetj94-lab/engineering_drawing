@@ -1,0 +1,24 @@
+name: Validate main branch site
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm run build
+      - run: npm test
+      - run: node --check src/app.js
+      - name: Check committed main-branch publication
+        run: git diff --exit-code -- index.html app.js domain.js xml.js catalog.js style.css drawings .nojekyll
