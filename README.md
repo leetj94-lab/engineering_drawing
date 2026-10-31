@@ -20,6 +20,9 @@ screenshots, code, layouts or drawings are included.
   instrument. This is **object-level comparison**, not full CAD/pipe/text geometry diff.
 - Validate title-block completeness, identity/revision consistency, symbol metadata,
   canonical equipment tags and reciprocal OPC references.
+- Findings now zoom to their actual SVG object; Next issue cycles between invalid
+  objects and a red-outline legend identifies the count. Title-only findings open
+  the extracted title-block panel. Broken OPC navigation remains blocked.
 - Add revision/object-anchored review notes, locate their anchors and resolve notes.
   Notes persist in localStorage, not a shared review database.
 - Print/export through the browser print dialog (including PDF where the browser supports it).

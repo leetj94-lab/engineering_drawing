@@ -9,4 +9,6 @@
 - Browser: Back returns to pump sheet; comparison shows one added object (P-144), one
   changed object (PT-101) and no removals, with previous/current side-by-side drawings.
 - Static source is prepared at root for main / (root) Pages deployment.
+- Findings focus/zoom their SVG objects; Next issue cycles nonconforming objects;
+  title-only findings switch to extracted title fields.
 - Physical-device testing and production CAD conversion/security testing are outside scope.
